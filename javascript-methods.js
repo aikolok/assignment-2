@@ -122,8 +122,15 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 };
 
 // KEYS //
+// The Object.keys() method returns an array of a given 
+// object's own enumerable property names, iterated in the 
+// same order that a normal loop would. 
 Object.myKeys = function(object) {
-  // Place your code here.
+  let keys = [];
+  for(const property_name in object) {
+    keys.push(String(property_name));
+  }
+  return keys;
 };
 
 // VALUES //
