@@ -29,7 +29,7 @@ Array.prototype.myFilter = function(callbackFn) {
     if (this[i] === undefined) continue;
     if (callbackFn(this[i], i, this) == true) {
       new_array.push(this[i]);
-    };
+    }
   }
   return new_array;
 };
@@ -45,7 +45,7 @@ Array.prototype.mySome = function(callbackFn) {
     if (this[i] === undefined) continue;
     if (callbackFn(this[i], i, this) == true) {
       return true;
-    };
+    }
   }
   return false;
 };
@@ -59,14 +59,24 @@ Array.prototype.myEvery = function(callbackFn) {
     if (this[i] === undefined) continue;
     if (callbackFn(this[i], i, this) == false) {
       return false;
-    };
+    }
   }
   return true;
 };
 
 // REDUCE //
+// The reduce() method executes a user-supplied "reducer" 
+// callback function on each element of the array, in order, 
+// passing in the return value from the calculation on the 
+// preceding element. The final result of running the reducer 
+// across all elements of the array is a single value. 
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+  let result = callbackFn(this[0], this[1], 1, this);
+  for (let i = 2; i < this.length; i++) {   
+    if (this[i] === undefined) continue;
+    result = callbackFn(result, this[i], i, this)
+  }
+  return result;
 };
 
 // INCLUDES //
