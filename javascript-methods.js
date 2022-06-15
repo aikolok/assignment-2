@@ -134,6 +134,13 @@ Object.myKeys = function(object) {
 };
 
 // VALUES //
+// The Object.values() method returns an array of a given 
+// object's own enumerable property values, in the same order 
+// as that provided by a for...in loop.  
 Object.myValues = function(object) {
-  // Place your code here.
+  let values = [];
+  for(const property_name in object) {
+    values.push(object[property_name]);
+  }
+  return values;
 };
