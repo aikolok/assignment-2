@@ -1,5 +1,3 @@
-# Assignment 2 - JavaScript Methods. 
+# JavaScript Methods. 
 
-Group member:
-
-Alima Asanbaeva (myself) - aikolok
+Implemented native JavaScript methods.
